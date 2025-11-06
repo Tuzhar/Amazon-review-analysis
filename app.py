@@ -8,6 +8,8 @@ import numpy as np
 import nltk
 import plotly.express as px
 import kaleido
+import nltk
+
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from scipy.special import softmax
@@ -23,6 +25,7 @@ df = df[['Id', 'Text', 'Score']].dropna()
 df = df.head(500)
 
 # ----------- 2. Initializing Models ---------
+nltk.download('vader_lexicon')
 sia = SentimentIntensityAnalyzer()
 MODEL = "cardiffnlp/twitter-roberta-base-sentiment"
 tokenizer = AutoTokenizer.from_pretrained(MODEL)
@@ -203,4 +206,5 @@ st.markdown(
     [GitHub](https://github.com/Tuzhar) | [LinkedIn](https://www.linkedin.com/in/tushar-singh-086644262/)
     """
 )
+
 
