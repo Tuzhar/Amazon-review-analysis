@@ -1,0 +1,11 @@
+pandas
+matplotlib
+streamlit
+textblob
+numpy
+nltk
+plotly
+kaleido
+transformers
+scipy
+wordcloud
