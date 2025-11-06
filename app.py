@@ -25,7 +25,10 @@ df = df[['Id', 'Text', 'Score']].dropna()
 df = df.head(500)
 
 # ----------- 2. Initializing Models ---------
+# Download required NLTK data
 nltk.download('vader_lexicon')
+nltk.download('punkt')
+nltk.download('stopwords')
 sia = SentimentIntensityAnalyzer()
 MODEL = "cardiffnlp/twitter-roberta-base-sentiment"
 tokenizer = AutoTokenizer.from_pretrained(MODEL)
@@ -206,5 +209,6 @@ st.markdown(
     [GitHub](https://github.com/Tuzhar) | [LinkedIn](https://www.linkedin.com/in/tushar-singh-086644262/)
     """
 )
+
 
 
