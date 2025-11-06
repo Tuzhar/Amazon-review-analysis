@@ -18,7 +18,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # ------------ 1. Loading Data -----------
-df = pd.read_csv('Reviews.csv')
+df = pd.read_csv('Reviews_initiall.csv')
 df = df[['Id', 'Text', 'Score']].dropna()
 df = df.head(500)
 
@@ -203,3 +203,4 @@ st.markdown(
     [GitHub](https://github.com/Tuzhar) | [LinkedIn](https://www.linkedin.com/in/tushar-singh-086644262/)
     """
 )
+
