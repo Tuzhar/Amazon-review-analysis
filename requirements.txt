@@ -9,3 +9,4 @@ kaleido
 transformers
 scipy
 wordcloud
+torch
